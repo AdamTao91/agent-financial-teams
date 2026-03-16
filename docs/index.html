@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Teams - 专业金融AI Agent团队</title>
+    <meta name="description" content="免费开源的金融AI Agent团队，7大角色协作，提供投研、投行、市值管理、财富管理等全方位服务">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .hero {
+            text-align: center;
+            color: white;
+            margin-bottom: 60px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        .hero p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+        .hero .tagline {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            background: rgba(255,255,255,0.15);
+            padding: 12px 24px;
+            border-radius: 30px;
+            display: inline-block;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+        .feature-card {
+            background: white;
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        .feature-card h3 {
+            color: #667eea;
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .feature-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        .roles {
+            background: white;
+            border-radius: 16px;
+            padding: 35px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            margin-bottom: 40px;
+        }
+        .roles h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+        }
+        .roles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+        }
+        .role-item {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .role-item .icon {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+        .role-item .name {
+            font-weight: 600;
+            color: #333;
+            font-size: 0.9rem;
+        }
+        .role-item .desc {
+            font-size: 0.75rem;
+            color: #888;
+            margin-top: 4px;
+        }
+        .cta {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+        .cta h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            padding: 14px 32px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        .btn-primary {
+            background: white;
+            color: #667eea;
+        }
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        .btn-secondary:hover {
+            background: white;
+            color: #667eea;
+        }
+        .demo {
+            background: white;
+            border-radius: 16px;
+            padding: 35px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+        .demo h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .demo-flow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-size: 0.9rem;
+        }
+        .demo-step {
+            background: #f5f7fa;
+            padding: 12px 18px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .demo-arrow {
+            color: #667eea;
+            font-size: 1.5rem;
+        }
+        footer {
+            text-align: center;
+            color: rgba(255,255,255,0.8);
+            margin-top: 50px;
+            font-size: 0.85rem;
+        }
+        footer a {
+            color: white;
+        }
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1rem; }
+            .roles-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1>🤖 Financial Teams</h1>
+            <p>专业金融AI Agent团队 | 7大角色协作 | 覆盖投研、投行、市值管理、财富管理</p>
+            <div class="tagline">免费开源 | 一键安装 | 支持A股实时行情</div>
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <h3>🎯 多角色协作</h3>
+                <p>7大金融角色协同工作，从持仓诊断到行业分析，提供综合投资建议</p>
+            </div>
+            <div class="feature-card">
+                <h3>📈 实时行情</h3>
+                <p>内置A股、ETF、基金实时数据支持，无需额外配置，开箱即用</p>
+            </div>
+            <div class="feature-card">
+                <h3>🔧 一键安装</h3>
+                <p>通过 ClawHub 直接安装，支持单个角色或完整团队包</p>
+            </div>
+            <div class="feature-card">
+                <h3>📊 全面覆盖</h3>
+                <p>涵盖投研、投行、市值管理、财富管理、交易执行、舆情监控</p>
+            </div>
+            <div class="feature-card">
+                <h3>🆓 完全免费</h3>
+                <p>MIT开源协议，无需付费即可商用和学习</p>
+            </div>
+            <div class="feature-card">
+                <h3>⚡ 基于OpenClaw</h3>
+                <p>构建于OpenClaw框架，支持语音、记忆、多Agent协作</p>
+            </div>
+        </div>
+
+        <div class="roles">
+            <h2>7大金融角色</h2>
+            <div class="roles-grid">
+                <div class="role-item">
+                    <div class="icon">👔</div>
+                    <div class="name">投顾专家</div>
+                    <div class="desc">统筹协调，综合服务</div>
+                </div>
+                <div class="role-item">
+                    <div class="icon">🔍</div>
+                    <div class="name">行业研究员</div>
+                    <div class="desc">产业链分析，机会挖掘</div>
+                </div>
+                <div class="role-item">
+                    <div class="icon">🏦</div>
+                    <div class="name">投行专家</div>
+                    <div class="desc">并购IPO，资本运作</div>
+                </div>
+                <div class="role-item">
+                    <div class="icon">📊</div>
+                    <div class="name">市值管理助理</div>
+                    <div class="desc">IR策略，资本运作</div>
+                </div>
+                <div class="role-item">
+                    <div class="icon">💰</div>
+                    <div class="name">财富专员</div>
+                    <div class="desc">资产配置，基金筛选</div>
+                </div>
+                <div class="role-item">
+                    <div class="icon">📈</div>
+                    <div class="name">商机助理</div>
+                    <div class="desc">买卖时机，仓位管理</div>
+                </div>
+                <div class="role-item">
+                    <div class="icon">🔔</div>
+                    <div class="name">企业舆情助理</div>
+                    <div class="desc">舆情监测，风险预警</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo">
+            <h2>使用示例：持仓诊断</h2>
+            <div class="demo-flow">
+                <div class="demo-step">📝 输入持仓<br><small>588830, 10万</small></div>
+                <span class="demo-arrow">→</span>
+                <div class="demo-step">📊 获取实时行情<br><small>自动抓取</small></div>
+                <span class="demo-arrow">→</span>
+                <div class="demo-step">🔍 行业分析<br><small>研究员</small></div>
+                <span class="demo-arrow">→</span>
+                <div class="demo-step">📈 交易信号<br><small>商机助理</small></div>
+                <span class="demo-arrow">→</span>
+                <div class="demo-step">🔔 风险排查<br><small>舆情助理</small></div>
+                <span class="demo-arrow">→</span>
+                <div class="demo-step">💡 综合报告<br><small>投顾专家</small></div>
+            </div>
+        </div>
+
+        <div class="cta">
+            <h2>立即开始使用</h2>
+            <div class="cta-buttons">
+                <a href="https://github.com/AdamTao91/agent-financial-teams" class="btn btn-primary" target="_blank">GitHub</a>
+                <a href="https://openclaw.ai" class="btn btn-secondary" target="_blank">OpenClaw</a>
+            </div>
+        </div>
+
+        <footer>
+            <p>⚠️ 本工具仅供投资参考，不构成投资建议 | 投资有风险，入市需谨慎</p>
+            <p>© 2026 Financial Teams | <a href="https://github.com/AdamTao91/agent-financial-teams">MIT License</a></p>
+        </footer>
+    </div>
+</body>
+</html>
