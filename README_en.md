@@ -1,4 +1,4 @@
-# Financial Teams - Professional Financial AI Agent
+# Financial Teams - AI Investment Research Team
 
 <p align="center">
   <a href="https://openclaw.ai"><img src="https://img.shields.io/badge/Powered%20by-OpenClaw-blue" alt="OpenClaw"></a>
@@ -7,152 +7,152 @@
   <a href="https://github.com/AdamTao91/agent-financial-teams/releases"><img src="https://img.shields.io/github/v/release/AdamTao91/agent-financial-teams" alt="Version"></a>
 </p>
 
-> Pre-configured professional financial AI agent team with multi-role collaboration, providing comprehensive support for investment decisions.
+> Your personal AI investment bank team. 7 specialized agents collaborate to analyze stocks, detect risks, and generate investment reports.
 
-## 🎯 Introduction
+## 🚀 Why Financial Teams?
 
-**Financial Teams** is a free and open-source OpenClaw pre-configured financial AI agent library. More professional and flexible than ClawTeam.
+| Traditional | With Financial Teams |
+|------------|---------------------|
+| Hours of research → | Minutes to insights |
+| Single AI response → | Multi-agent debate & analysis |
+| Scattered data → | Real-time data aggregation |
+| No collaboration → | 7 experts working together |
 
-### Key Features
+## 🎯 Key Advantages
 
-- 🤖 **7 Specialized Financial Roles** - Covering investment research, investment banking, market cap management, wealth management, trade execution, sentiment monitoring, and investment advisory
-- 📊 **Multi-Role Collaboration** - Team synergy for comprehensive analysis reports
-- 📈 **Real-Time Market Data** - Support for A-shares, ETFs, funds, and more
-- 🔧 **One-Click Installation** - Install directly via ClawHub
+### 1. Multi-Agent Collaboration
+Unlike single AI assistants, **7 specialized agents work together** like a real investment bank:
+- Investment Advisor coordinates the team
+- Industry Researcher analyzes sectors
+- Business Analyst finds entry/exit timing
+- Sentiment Analyst monitors risks
+- Wealth Advisor optimizes allocations
+
+### 2. Real-Time China A-Share Data
+- **A-shares, ETFs, funds** - built-in support
+- No additional setup required
+- Instant access to market quotes
+
+### 3. Comprehensive Analysis
+One query returns:
+- ✅ Portfolio diagnosis
+- ✅ Industry trend analysis  
+- ✅ Trading signals
+- ✅ Risk alerts
+- ✅ Asset allocation suggestions
 
 ## 📦 Installation
 
 ```bash
-# Install complete financial team package
+# Install complete financial team
 clawdhub install financial-teams
 
-# Or install individual roles
+# Or individual roles
 clawdhub install financial-teams/investment-advisor
-clawdhub install financial-teams/industry-researcher
-clawdhub install financial-teams/investment-banker
 ```
 
 ## 🤖 Team Members
 
-| Role | Description | Core Functions |
-|------|-------------|----------------|
-| Investment Advisor | Comprehensive service, coordination | Portfolio diagnosis, integrated recommendations |
-| Industry Researcher | Investment research | Industry chain analysis, opportunity discovery |
-| Investment Banker | M&A & IPO | Capital operations, valuation |
-| Market Cap Manager | Market cap management | IR strategy, capital operations |
-| Wealth Advisor | Wealth management | Asset allocation, fund selection |
-| Business Analyst | Trading signals | Entry/exit timing, position management |
-| Sentiment Analyst | Risk monitoring | Sentiment monitoring, risk alerts |
+| Agent | Role | What It Does |
+|-------|------|--------------|
+| 📊 Investment Advisor | Team Lead | Coordinates, synthesizes reports |
+| 🔍 Industry Researcher | Analyst | Sector analysis, opportunities |
+| 💼 Investment Banker | M&A Expert | Valuation, capital ops |
+| 📈 Business Analyst | Quant | Entry/exit timing, signals |
+| 🛡️ Sentiment Analyst | Risk Manager | News, sentiment, alerts |
+| 💰 Wealth Advisor | Planner | Asset allocation, funds |
+| 📢 Market Cap Manager | IR | Investor relations |
 
-## 🔄 Collaboration Workflow
+## 💡 Use Cases
+
+### For Individual Investors
+```
+You: "Analyze my portfolio of 588830, 50000 CNY"
+
+↓ Financial Teams activates ↓
+
+→ Gets real-time quotes
+→ Industry Researcher checks sector trends
+→ Business Analyst evaluates timing
+→ Sentiment Analyst scans for risks
+→ Wealth Advisor suggests rebalancing
+
+→ You get a comprehensive investment report
+```
+
+### For Traders
+- ✅ Real-time stock alerts
+- ✅ Sector rotation signals
+- ✅ Risk detection
+- ✅ Entry/exit recommendations
+
+### For Financial Professionals
+- ✅ Automated research reports
+- ✅ Due diligence support
+- ✅ Portfolio analysis
+
+## 🔄 How It Works
 
 ```
-User Portfolio Query
-        ↓
+User Query
+    ↓
 ┌─────────────────────────────────────┐
-│    Investment Advisor (Coordinator) │
-│    - Fetch Real-Time Quotes         │
+│    Investment Advisor               │
+│    (Analyzes needs, delegates)     │
 └──────────┬──────────────────────────┘
            │
     ┌──────┴──────┬──────────┬──────────┐
-    ▼             ▼          ▼          ▼
+    ↓             ↓          ↓          ↓
 ┌────────┐  ┌────────┐  ┌────────┐  ┌────────┐
 │Industry│  │Business│  │Sentiment│  │Wealth  │
 │Research│  │Analyst │  │Analyst  │  │Advisor │
 └────────┘  └────────┘  └────────┘  └────────┘
-    │             │          │          │
+    ↓             ↓          ↓          ↓
     └─────────────┴──────────┴──────────┘
                   ↓
 ┌─────────────────────────────────────┐
-│    Investment Advisor (Report)      │
-│    - Portfolio Diagnosis           │
-│    - Industry Evaluation           │
-│    - Action Recommendations        │
-│    - Risk Alerts                   │
-│    - Allocation Suggestions        │
+│    Investment Advisor               │
+│    (Compiles final report)         │
 └─────────────────────────────────────┘
 ```
 
-## 📊 Demo
+## 📊 Comparison
 
-**Portfolio Analysis Example:**
+| Feature | Other Solutions | Financial Teams |
+|---------|----------------|-----------------|
+| Agent Count | 1 | 7 |
+| Collaboration | ❌ | ✅ Multi-agent |
+| China A-Share | Limited | ✅ Full support |
+| Real-time Data | Setup required | ✅ Built-in |
+| Installation | Complex | ✅ One command |
+| Price | Paid | ✅ Free |
 
-```
-User: Holding 588830 (ETF), 588,830 CNY, 99.95% position
-↓
-Auto-fetch real-time quotes
-↓
-Summon Industry Researcher for trend analysis
-↓
-Summon Business Analyst for trading opportunities
-↓
-Summon Sentiment Analyst for risk checking
-↓
-Summon Wealth Advisor for allocation suggestions
-↓
-Investment Advisor delivers comprehensive report
-```
+## 🏆 Why It Works
 
-## 📁 Directory Structure
-
-```
-financial-teams/
-├── README.md
-├── config.json
-├── collaboration-system.md
-└── teams/
-    ├── investment-advisor/      # Investment Advisor
-    ├── industry-researcher/     # Industry Researcher
-    ├── investment-banker/       # Investment Banker
-    ├── market-cap-manager/      # Market Cap Manager
-    ├── wealth-advisor/         # Wealth Advisor
-    ├── business-opportunity-analyst/  # Business Analyst
-    └── corporate-sentiment-analyst/   # Sentiment Analyst
-```
-
-## 🔧 Configuration
-
-### config.json
-
-```json
-{
-  "name": "Financial Teams",
-  "version": "1.0.0",
-  "model": "minimax-portal/MiniMax-M2.5",
-  "capabilities": {
-    "voice": true,
-    "memory": true,
-    "collaboration": true
-  }
-}
-```
-
-## 🌐 Comparison
-
-| Feature | ClawTeam | Financial Teams |
-|---------|----------|-----------------|
-| Financial Expertise | General | ✅ Financial-specific |
-| Multi-Role Collaboration | Single role | ✅ Team collaboration |
-| Real-Time Quotes | Requires setup | ✅ Built-in support |
-| China A-Share | Limited support | ✅ Full support |
-| Open Source | Partial free | ✅ Completely free |
+1. **Specialization** - Each agent is an expert in their domain
+2. **Collaboration** - Agents debate and validate each other's findings
+3. **Speed** - Parallel processing means faster insights
+4. **Depth** - 7 perspectives > 1
 
 ## 📝 Disclaimer
 
-- This tool is for investment reference only, not investment advice
-- Investment involves risks, proceed with caution
-- No returns are guaranteed
-- Comply with relevant laws and regulations
+- For educational purposes only
+- Not financial advice
+- Invest at your own risk
+
+## ⭐️ Star Us
+
+If this helps you, please star the repo!
+
+```bash
+git clone https://github.com/AdamTao91/agent-financial-teams
+```
 
 ## 🤝 Contributing
 
-Welcome to submit Issues and Pull Requests!
-
-## 📄 License
-
-MIT License
+Issues and PRs welcome!
 
 ---
 
-**Author:** Han Li  
-**Last Updated:** 2026-03-13
+**Built with ❤️ on OpenClaw**  
+**License: MIT**
