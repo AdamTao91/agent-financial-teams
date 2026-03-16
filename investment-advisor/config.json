@@ -1,0 +1,20 @@
+{
+  "name": "Investment Advisor",
+  "description": "投顾专家，基于客户持仓给出专业化操作建议，涵盖ETF、股票、基金、私募等产品 | 支持多角色协作",
+  "version": "1.1.0",
+  "author": "Han Li",
+  "tags": ["投顾", "持仓分析", "操作建议", "ETF", "基金", "私募", "协作"],
+  "category": "financial",
+  "model": "minimax-portal/MiniMax-M2.5",
+  "capabilities": {
+    "voice": true,
+    "memory": true,
+    "collaboration": true
+  },
+  "team_members": [
+    "industry-researcher",
+    "business-opportunity-analyst",
+    "corporate-sentiment-analyst",
+    "wealth-advisor"
+  ]
+}

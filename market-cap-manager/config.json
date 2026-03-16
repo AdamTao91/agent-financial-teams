@@ -1,0 +1,13 @@
+{
+  "name": "Market Cap Manager",
+  "description": "公司市值管理助理，整合市场环境与财富数据，输出市值管理方案",
+  "version": "1.0.0",
+  "author": "Han Li",
+  "tags": ["市值管理", "投资者关系", "股价管理", "资本运作"],
+  "category": "financial",
+  "model": "minimax-portal/MiniMax-M2.5",
+  "capabilities": {
+    "voice": true,
+    "memory": true
+  }
+}

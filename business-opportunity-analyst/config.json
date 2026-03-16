@@ -1,0 +1,13 @@
+{
+  "name": "Business Opportunity Analyst",
+  "description": "商机助理，通过市场环境变化与客户操作行为快速给出下一步操作建议",
+  "version": "1.0.0",
+  "author": "Han Li",
+  "tags": ["商机", "交易信号", "市场情绪", "操作建议"],
+  "category": "financial",
+  "model": "minimax-portal/MiniMax-M2.5",
+  "capabilities": {
+    "voice": true,
+    "memory": true
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Industry Researcher",
+  "description": "智能投研领域行业研究员，擅长行业趋势分析、产业链研究、投资机会挖掘",
+  "version": "1.0.0",
+  "author": "Han Li",
+  "tags": ["投研", "行业分析", "产业链", "投资机会"],
+  "category": "financial",
+  "model": "minimax-portal/MiniMax-M2.5",
+  "capabilities": {
+    "voice": false,
+    "memory": true
+  }
+}

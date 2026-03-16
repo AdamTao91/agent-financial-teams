@@ -1,103 +1,144 @@
-# Financial Teams - 🥇 全球首个整合型AI投资平台
+# Financial Teams - 金融AI Agent团队
 
-<p align="center">
-  <a href="https://github.com/AdamTao91/agent-financial-teams/stargazers"><img src="https://img.shields.io/github/stars/AdamTao91/agent-financial-teams" alt="Stars"></a>
-  <a href="https://github.com/AdamTao91/agent-financial-teams/blob/main/LICENSE"><img src="https://img.shields.io/github/license/AdamTao91/agent-financial-teams" alt="License"></a>
-  <img src="https://img.shields.io/badge/Python-3.8+-blue" alt="Python">
-  <img src="https://img.shields.io/badge/akshare-Native-green" alt="akshare">
-  <img src="https://img.shields.io/badge/yfinance-Integrated-green" alt="yfinance">
-</p>
+> 预配置的专业金融分析Agent团队，支持多角色协作，为投资决策提供全方位支持
 
-> 🤖 **全球首个整合akshare + yfinance + vnpy概念的AI Agent团队** | 7+3专业Agent | 9维度诊断 | 免费开源
+[![OpenClaw](https://img.shields.io/badge/OpenClaw-2026.3+-blue)](https://openclaw.ai)
+[![License](https://img.shields.io/badge/License-MIT-green)]()
+[![Version](https://img.shields.io/badge/Version-1.0.0-orange)]()
 
----
+## 🎯 简介
 
-## 🏆 已整合功能
+**Financial Teams** 是一个免费开源的 OpenClaw 预配置金融Agent库，比 ClawTeam 更专业、更灵活。
 
-### 数据源
-| 数据源 | 功能 | 状态 |
-|--------|------|------|
-| **akshare** | A股/期货/基金/宏观 | ✅ 内置 |
-| **yfinance** | 美股/港股 | ✅ 已安装 |
-| **OpenBB** | 全球市场 | ⚠️ 可选 |
+- 🤖 **7大金融角色** - 覆盖投研、投行、市值管理、财富管理、交易执行、舆情监控、投资顾问
+- 📊 **多角色协作** - 支持团队协同工作，提供综合分析报告
+- 📈 **实时行情接入** - 支持A股、ETF、基金等实时数据
+- 🔧 **一键安装** - 通过 ClawHub 直接安装
 
-### 交易框架 (vnpy概念)
-- ✅ 回测引擎
-- ✅ 订单管理
-- ✅ 持仓管理
-- ✅ 风控模块
-
-### 技术指标
-- ✅ MA/EMA均线
-- ✅ MACD
-- ✅ RSI
-- ✅ 布林带
-- ✅ KDJ
-- ⚠️ TA-Lib (可选)
-
-### 缠论分析
-- ✅ 分型识别
-- ✅ 笔的分析
-- ✅ 背驰判断
-
----
-
-## 🚀 安装
+## 📦 安装
 
 ```bash
-# 基础版
-pip install akshare pandas numpy yfinance
+# 安装完整金融团队包
+clawdhub install financial-teams
 
-# 完整版
-pip install akshare pandas numpy yfinance openbb
-
-# 克隆
-git clone https://github.com/AdamTao91/agent-financial-teams
+# 或安装单个角色
+clawdhub install financial-teams/investment-advisor
 ```
 
----
+## 🤖 团队成员
 
-## 💡 使用
+| 角色 | 说明 | 核心功能 |
+|------|------|----------|
+| **投顾专家** | 综合服务，统筹协调 | 持仓诊断、综合建议 |
+| **行业研究员** | 智能投研 | 产业链分析、机会挖掘 |
+| **投行专家** | 并购IPO | 资本运作、估值定价 |
+| **市值管理助理** | 市值管理 | IR策略、资本运作 |
+| **财富专员** | 财富管理 | 资产配置、基金筛选 |
+| **商机助理** | 交易信号 | 买卖时机、仓位管理 |
+| **企业舆情助理** | 风险监控 | 舆情监测、风险预警 |
 
-```python
-from ultimate import FinancialTeamsUltimate
+## 🔄 协作流程
 
-ft = FinancialTeamsUltimate()
-
-# A股分析
-result = ft.analyze('588830', market='china')
-
-# 美股分析
-apple = ft.datahub.get_us_stock('AAPL')
-print(f"AAPL: ${apple['price']}")
-
-# 技术分析
-macd = ft.tech.macd(prices)
-rsi = ft.tech.rsi(prices)
+```
+用户持仓查询
+    ↓
+┌─────────────────────────────────────┐
+│  投顾专家（统筹）                   │
+│  - 获取实时行情                      │
+└──────────┬──────────────────────────┘
+           │
+    ┌──────┴──────┬──────────┬──────────┐
+    ▼             ▼          ▼          ▼
+┌────────┐ ┌────────┐ ┌────────┐ ┌────────┐
+│ 行业    │ │ 商机   │ │ 企业   │ │ 财富   │
+│ 研究员  │ │ 助理   │ │ 舆情   │ │ 专员   │
+└────────┘ └────────┘ └────────┘ └────────┘
+    │             │          │          │
+    └─────────────┴──────────┴──────────┘
+           ↓
+┌─────────────────────────────────────┐
+│  投顾专家（综合报告）                │
+│  - 持仓诊断 - 行业评估              │
+│  - 操作建议 - 风险预警              │
+│  - 配置建议                        │
+└─────────────────────────────────────┘
 ```
 
----
+## 📊 功能演示
 
-## 📁 项目结构
+### 持仓分析示例
+
+```
+用户：持有588830，588830元，仓位99.95%
+
+→ 自动获取实时行情
+→ 召唤行业研究员分析行业趋势
+→ 召唤商机助理分析交易机会
+→ 召唤企业舆情助理排查风险
+→ 召唤财富专员提供配置建议
+→ 投顾专家给出综合诊断报告
+```
+
+## 📁 目录结构
 
 ```
 financial-teams/
-├── ultimate/                  # ULTIMATE整合版 🥇
-│   └── __init__.py           # 统一入口
-├── technical-analyst/        # 技术分析
-├── chan-analyst/            # 缠论分析
-├── quant-factor/            # 量化因子
-├── comprehensive_report.py  # 9维度诊断
-└── cli.py                   # CLI工具
+├── README.md
+├── config.json
+├── collaboration-system.md
+└── teams/
+    ├── investment-advisor/         # 投顾专家
+    ├── industry-researcher/       # 行业研究员
+    ├── investment-banker/          # 投行专家
+    ├── market-cap-manager/         # 市值管理助理
+    ├── wealth-advisor/             # 财富专员
+    ├── business-opportunity-analyst/ # 商机助理
+    └── corporate-sentiment-analyst/ # 企业舆情助理
 ```
+
+## 🔧 配置
+
+### 配置文件 (config.json)
+
+```json
+{
+  "name": "Financial Teams",
+  "version": "1.0.0",
+  "model": "minimax-portal/MiniMax-M2.5",
+  "capabilities": {
+    "voice": true,
+    "memory": true,
+    "collaboration": true
+  }
+}
+```
+
+## 🌐 对比
+
+| 特性 | ClawTeam | Financial Teams |
+|------|----------|-----------------|
+| 金融专业度 | 通用 | ✅ 金融专属 |
+| 多角色协作 | 单角色 | ✅ 团队协作 |
+| 实时行情 | 需额外配置 | ✅ 内置支持 |
+| 中国A股 | 支持有限 | ✅ 全面支持 |
+| 开源免费 | 部分收费 | ✅ 完全免费 |
+
+## 📝 使用条款
+
+- 本工具仅供投资参考，不构成投资建议
+- 投资有风险，入市需谨慎
+- 不承诺任何收益
+- 遵守相关法律法规
+
+## 🤝 贡献
+
+欢迎提交 Issue 和 Pull Request！
+
+## 📄 License
+
+MIT License
 
 ---
 
-## ⭐ 安装命令
-
-```bash
-pip install akshare pandas numpy yfinance
-git clone https://github.com/AdamTao91/agent-financial-teams
-cd agent-financial-teams
-python ultimate/__init__.py
-```
+**作者**: Han Li  
+**更新**: 2026-03-06

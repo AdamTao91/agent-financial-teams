@@ -1,0 +1,13 @@
+{
+  "name": "Investment Banker",
+  "description": "投行专家，擅长并购重组、IPO辅导、债券发行、私募融资",
+  "version": "1.0.0",
+  "author": "Han Li",
+  "tags": ["投行", "并购", "IPO", "债券", "私募"],
+  "category": "financial",
+  "model": "minimax-portal/MiniMax-M2.5",
+  "capabilities": {
+    "voice": false,
+    "memory": true
+  }
+}

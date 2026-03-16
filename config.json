@@ -1,0 +1,79 @@
+{
+  "name": "Financial Teams",
+  "description": "专业金融AI Agent团队，7大角色协作，提供投研、投行、市值管理、财富管理、交易执行、舆情监控、投资顾问全方位服务",
+  "version": "1.0.0",
+  "author": "Han Li",
+  "tags": [
+    "金融",
+    "投顾",
+    "ETF",
+    "A股",
+    "投资分析",
+    "资产配置",
+    "团队协作",
+    "实时行情"
+  ],
+  "category": "ai-agent-teams",
+  "model": "minimax-portal/MiniMax-M2.5",
+  "license": "MIT",
+  "homepage": "https://github.com/openclaw/agent-teams",
+  "repository": "https://github.com/openclaw/agent-teams",
+  "documentation": "https://github.com/openclaw/agent-teams/financial-teams/README.md",
+  "capabilities": {
+    "voice": true,
+    "memory": true,
+    "collaboration": true,
+    "realtime_data": true
+  },
+  "team_members": [
+    {
+      "id": "investment-advisor",
+      "name": "投顾专家",
+      "description": "综合服务，统筹协调"
+    },
+    {
+      "id": "industry-researcher",
+      "name": "行业研究员",
+      "description": "产业链分析、机会挖掘"
+    },
+    {
+      "id": "investment-banker",
+      "name": "投行专家",
+      "description": "并购重组、IPO辅导"
+    },
+    {
+      "id": "market-cap-manager",
+      "name": "市值管理助理",
+      "description": "IR策略、资本运作"
+    },
+    {
+      "id": "wealth-advisor",
+      "name": "财富专员",
+      "description": "资产配置、基金筛选"
+    },
+    {
+      "id": "business-opportunity-analyst",
+      "name": "商机助理",
+      "description": "交易信号、买卖时机"
+    },
+    {
+      "id": "corporate-sentiment-analyst",
+      "name": "企业舆情助理",
+      "description": "舆情监测、风险预警"
+    }
+  ],
+  "data_sources": {
+    "realtime": [
+      {
+        "name": "腾讯财经",
+        "url": "https://qt.gtimg.cn/q=",
+        "type": "stock_etf"
+      },
+      {
+        "name": "东方财富",
+        "url": "https://push2.eastmoney.com/",
+        "type": "market_data"
+      }
+    ]
+  }
+}

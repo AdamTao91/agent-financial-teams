@@ -1,0 +1,13 @@
+{
+  "name": "Wealth Advisor",
+  "description": "财富专员，通过各类金融产品数据制定资产配置建议",
+  "version": "1.0.0",
+  "author": "Han Li",
+  "tags": ["财富管理", "资产配置", "基金", "理财"],
+  "category": "financial",
+  "model": "minimax-portal/MiniMax-M2.5",
+  "capabilities": {
+    "voice": true,
+    "memory": true
+  }
+}

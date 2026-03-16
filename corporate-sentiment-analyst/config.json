@@ -1,0 +1,13 @@
+{
+  "name": "Corporate Sentiment Analyst",
+  "description": "企业舆情助理，基于持股背后企业的舆情数据快速给出响应",
+  "version": "1.0.0",
+  "author": "Han Li",
+  "tags": ["舆情", "风险管理", "危机公关", "上市公司"],
+  "category": "financial",
+  "model": "minimax-portal/MiniMax-M2.5",
+  "capabilities": {
+    "voice": false,
+    "memory": true
+  }
+}
