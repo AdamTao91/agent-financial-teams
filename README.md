@@ -146,3 +146,26 @@ MIT License
 
 **作者**: Han Li  
 **更新**: 2026-03-06
+
+## 💻 快速示例
+
+### 安装
+```bash
+clawdhub install financial-teams
+```
+
+### 使用
+```
+# 持仓诊断
+我持有588830，20万元，4个月了
+
+# 行业分析
+分析一下白酒行业
+
+# ETF推荐
+有什么ETF推荐？
+```
+
+---
+
+⭐ Star us: https://github.com/AdamTao91/agent-financial-teams
