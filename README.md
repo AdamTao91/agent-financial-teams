@@ -1,142 +1,112 @@
-# Financial Teams - 金融AI Agent团队
+# Financial Teams
 
-> 预配置的专业金融分析Agent团队，支持多角色协作，为投资决策提供全方位支持
+<div align="center">
 
-[![OpenClaw](https://img.shields.io/badge/OpenClaw-2026.3+-blue)](https://openclaw.ai)
-[![License](https://img.shields.io/badge/License-MIT-green)]()
-[![Version](https://img.shields.io/badge/Version-1.0.0-orange)]()
-[![Python](https://img.shields.io/badge/Python-3.10+-blue)]()
-[![AI](https://img.shields.io/badge/AI-Multi--Agent-orange)]()
+![Logo](https://img.shields.io/badge/Financial%20Teams-7%20AI%20Agents-blue)
+![Stars](https://img.shields.io/github/stars/AdamTao91/agent-financial-teams)
+![License](https://img.shields.io/github/license/AdamTao91/agent-financial-teams)
+![Python](https://img.shields.io/badge/Python-3.10+-green)
 
-**Topics**: python | openclaw | ai-agent | fintech | stock-market | investment | trading | finance | quant
+让每个散户都拥有专业的AI投资团队
 
-## 🎯 简介
+[English](./README_en.md) | [中文](./README_CN.md)
 
-**Financial Teams** 是一个免费开源的 OpenClaw 预配置金融Agent库，比 ClawTeam 更专业、更灵活。
+</div>
 
-- 🤖 **7大金融角色** - 覆盖投研、投行、市值管理、财富管理、交易执行、舆情监控、投资顾问
-- 📊 **多角色协作** - 支持团队协同工作，提供综合分析报告
-- 📈 **实时行情接入** - 支持A股、ETF、基金等实时数据
-- 🔧 **一键安装** - 通过 ClawHub 直接安装
+## ⭐ 简介
+
+**Financial Teams** 是一个免费开源的 OpenClaw 预配置金融AI Agent库，7大AI角色协作，为投资决策提供全方位支持。
+
+## 🚀 特性
+
+- 🤖 **7大金融AI角色** - 投研、投行、市值管理、财富管理、交易执行、舆情监控、投资顾问
+- 📊 **多角色协作** - 团队协同工作，提供综合分析报告
+- 📈 **实时行情** - 支持A股、ETF、基金实时数据
+- 🔧 **一键安装** - 通过ClawHub直接安装
+- 💰 **完全免费** - 开源免费，无付费功能
 
 ## 📦 安装
 
 ```bash
-# 安装完整金融团队包
+# 方式1: ClawHub安装
 clawdhub install financial-teams
 
-# 或安装单个角色
-clawdhub install financial-teams/investment-advisor
+# 方式2: 克隆使用
+git clone https://github.com/AdamTao91/agent-financial-teams.git
+cd agent-financial-teams
+pip install -r requirements.txt
 ```
 
-## 🤖 团队成员
+## 💻 快速开始
 
-| 角色 | 说明 | 核心功能 |
-|------|------|----------|
-| **投顾专家** | 综合服务，统筹协调 | 持仓诊断、综合建议 |
-| **行业研究员** | 智能投研 | 产业链分析、机会挖掘 |
-| **投行专家** | 并购IPO | 资本运作、估值定价 |
-| **市值管理助理** | 市值管理 | IR策略、资本运作 |
-| **财富专员** | 财富管理 | 资产配置、基金筛选 |
-| **商机助理** | 交易信号 | 买卖时机、仓位管理 |
-| **企业舆情助理** | 风险监控 | 舆情监测、风险预警 |
-
-## 🔄 协作流程
-
-```
-用户持仓查询
-    ↓
-┌─────────────────────────────────────┐
-│  投顾专家（统筹）                   │
-│  - 获取实时行情                      │
-└──────────┬──────────────────────────┘
-           │
-    ┌──────┴──────┬──────────┬──────────┐
-    ▼             ▼          ▼          ▼
-┌────────┐ ┌────────┐ ┌────────┐ ┌────────┐
-│ 行业    │ │ 商机   │ │ 企业   │ │ 财富   │
-│ 研究员  │ │ 助理   │ │ 舆情   │ │ 专员   │
-└────────┘ └────────┘ └────────┘ └────────┘
-    │             │          │          │
-    └─────────────┴──────────┴──────────┘
-           ↓
-┌─────────────────────────────────────┐
-│  投顾专家（综合报告）                │
-│  - 持仓诊断 - 行业评估              │
-│  - 操作建议 - 风险预警              │
-│  - 配置建议                        │
-└─────────────────────────────────────┘
+```python
+# 运行演示
+python3 demo.py 588830 200000 4
 ```
 
-## 📊 功能演示
-
-### 持仓分析示例
-
+输出示例:
 ```
-用户：持有588830，588830元，仓位99.95%
-
-→ 自动获取实时行情
-→ 召唤行业研究员分析行业趋势
-→ 召唤商机助理分析交易机会
-→ 召唤企业舆情助理排查风险
-→ 召唤财富专员提供配置建议
-→ 投顾专家给出综合诊断报告
+🚀 FINANCIAL TEAMS - AI金融分析报告
+📌 分析对象: 鹏华科创新能源ETF (588830)
+🤖 7大AI Agent 协作分析中...
+📋 分析报告
+  • 综合评分: 72/100
+  • 建议操作: 持有观察
 ```
 
 ## 📁 目录结构
 
 ```
-financial-teams/
-├── README.md
-├── config.json
-├── collaboration-system.md
-└── teams/
-    ├── investment-advisor/         # 投顾专家
-    ├── industry-researcher/       # 行业研究员
-    ├── investment-banker/          # 投行专家
-    ├── market-cap-manager/         # 市值管理助理
-    ├── wealth-advisor/             # 财富专员
-    ├── business-opportunity-analyst/ # 商机助理
-    └── corporate-sentiment-analyst/ # 企业舆情助理
+agent-financial-teams/
+├── demo.py                 # 演示脚本
+├── examples.py             # 使用示例
+├── cli.py                  # 命令行工具
+├── orchestrator.py         # 协调器
+├── config.json             # 配置文件
+├── SKILL.md                # Skill定义
+├── README.md               # 中文文档
+├── README_en.md            # 英文文档
+├── QUICKSTART.md           # 快速开始
+├── API.md                  # API文档
+├── COMPARISON.md           # 竞品对比
+├── CONTRIBUTING.md         # 贡献指南
+├── CHANGELOG.md            # 更新日志
+└── teams/                  # 7大AI角色
+    ├── investment-advisor/
+    ├── industry-researcher/
+    ├── investment-banker/
+    ├── market-cap-manager/
+    ├── wealth-advisor/
+    ├── business-opportunity-analyst/
+    └── corporate-sentiment-analyst/
 ```
 
-## 🔧 配置
+## 🤖 7大AI角色
 
-### 配置文件 (config.json)
+| 角色 | 功能 |
+|------|------|
+| 投顾专家 | 持仓诊断、综合建议 |
+| 行业研究员 | 产业链分析、机会挖掘 |
+| 投行专家 | 资本运作、估值定价 |
+| 市值管理助理 | IR策略、资本运作 |
+| 财富专员 | 资产配置、基金筛选 |
+| 商机助理 | 买卖时机、仓位管理 |
+| 企业舆情助理 | 舆情监测、风险预警 |
 
-```json
-{
-  "name": "Financial Teams",
-  "version": "1.0.0",
-  "model": "minimax-portal/MiniMax-M2.5",
-  "capabilities": {
-    "voice": true,
-    "memory": true,
-    "collaboration": true
-  }
-}
-```
+## 📊 竞品对比
 
-## 🌐 对比
+| 特性 | Financial Teams | OpenBB | Qlib |
+|------|-----------------|--------|------|
+| AI Agent | ✅ 7个 | ❌ | ❌ |
+| 中国A股 | ✅ 完整 | ✅ | ✅ |
+| 免费 | ✅ 完全免费 | ✅ | ✅ |
+| 安装复杂度 | ⭐ 简单 | 中等 | 中等 |
 
-| 特性 | ClawTeam | Financial Teams |
-|------|----------|-----------------|
-| 金融专业度 | 通用 | ✅ 金融专属 |
-| 多角色协作 | 单角色 | ✅ 团队协作 |
-| 实时行情 | 需额外配置 | ✅ 内置支持 |
-| 中国A股 | 支持有限 | ✅ 全面支持 |
-| 开源免费 | 部分收费 | ✅ 完全免费 |
+## 🔗 链接
 
-## 📝 使用条款
-
-- 本工具仅供投资参考，不构成投资建议
-- 投资有风险，入市需谨慎
-- 不承诺任何收益
-- 遵守相关法律法规
-
-## 🤝 贡献
-
-欢迎提交 Issue 和 Pull Request！
+- ⭐ Star: https://github.com/AdamTao91/agent-financial-teams
+- 📖 文档: https://github.com/AdamTao91/agent-financial-teams#readme
+- 🐛 Issues: https://github.com/AdamTao91/agent-financial-teams/issues
 
 ## 📄 License
 
@@ -144,28 +114,4 @@ MIT License
 
 ---
 
-**作者**: Han Li  
-**更新**: 2026-03-06
-
-## 💻 快速示例
-
-### 安装
-```bash
-clawdhub install financial-teams
-```
-
-### 使用
-```
-# 持仓诊断
-我持有588830，20万元，4个月了
-
-# 行业分析
-分析一下白酒行业
-
-# ETF推荐
-有什么ETF推荐？
-```
-
----
-
-⭐ Star us: https://github.com/AdamTao91/agent-financial-teams
+**投资有风险，入市需谨慎** ⚠️
