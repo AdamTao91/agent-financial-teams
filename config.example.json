@@ -1,0 +1,81 @@
+{
+  "name": "Financial Teams",
+  "version": "1.0.0",
+  "description": "Professional Financial AI Agent Team",
+  
+  "model": {
+    "provider": "minimax",
+    "name": "MiniMax-M2.5",
+    "temperature": 0.7,
+    "max_tokens": 4000
+  },
+  
+  "capabilities": {
+    "voice": true,
+    "memory": true,
+    "collaboration": true,
+    "web_search": true,
+    "data_analysis": true
+  },
+  
+  "data_sources": {
+    "akshare": {
+      "enabled": true,
+      "markets": ["cn", "hk"]
+    },
+    "yfinance": {
+      "enabled": true,
+      "markets": ["us", "hk"]
+    }
+  },
+  
+  "agents": {
+    "investment_advisor": {
+      "enabled": true,
+      "role": "统筹协调，综合分析",
+      "model": "MiniMax-M2.5"
+    },
+    "industry_researcher": {
+      "enabled": true,
+      "role": "行业研究和机会挖掘"
+    },
+    "investment_banker": {
+      "enabled": true,
+      "role": "估值和资本运作"
+    },
+    "market_cap_manager": {
+      "enabled": true,
+      "role": "市值管理和IR策略"
+    },
+    "wealth_advisor": {
+      "enabled": true,
+      "role": "资产配置和基金筛选"
+    },
+    "business_analyst": {
+      "enabled": true,
+      "role": "交易信号和时机把握"
+    },
+    "sentiment_analyst": {
+      "enabled": true,
+      "role": "风险监控和舆情分析"
+    }
+  },
+  
+  "analysis": {
+    "default_risk_level": "medium",
+    "enable_technical": true,
+    "enable_fundamental": true,
+    "enable_sentiment": true,
+    "cache_ttl": 300
+  },
+  
+  "notifications": {
+    "enabled": false,
+    "channels": ["console"]
+  },
+  
+  "logging": {
+    "level": "info",
+    "file": "financial_teams.log"
+  }
+}
